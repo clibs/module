@@ -1,0 +1,15 @@
+{
+  "name": "clibs/module",
+  "repo": "clibs/module",
+  "version": "0.0.0",
+  "description": "A set of macros and functions to make defining a C module easier",
+  "license": "MIT",
+  "makefile": "Makefile",
+  "src": [
+    "module.h",
+    "require.h"
+  ],
+  "development": {
+    "jwerle/libok": "0.3.1"
+  }
+}
