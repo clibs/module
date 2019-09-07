@@ -1,6 +1,6 @@
 {
   "name": "@clibs/module",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "A set of macros and functions to make defining a C module easier",
   "main": "module.h",
   "directories": {
