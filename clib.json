@@ -6,8 +6,10 @@
   "license": "MIT",
   "makefile": "Makefile",
   "src": [
+    "require.h",
     "module.h",
-    "require.h"
+    "LICENSE",
+    "def.h"
   ],
   "development": {
     "jwerle/libok": "0.3.1"
