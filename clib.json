@@ -1,7 +1,7 @@
 {
   "name": "clibs/module",
   "repo": "clibs/module",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "A set of macros and functions to make defining a C module easier",
   "license": "MIT",
   "makefile": "Makefile",
