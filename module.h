@@ -30,8 +30,8 @@
 #ifndef clib_module_exports
 #define clib_module_exports(type)                                              \
   typedef clib_module(type) type##_t;                                          \
+  clib_module(type) *__##type##_clib_module;                                   \
   static unsigned int __##type##_clib_module_init = 0;                         \
-  static clib_module(type) *__##type##_clib_module;                            \
   static clib_module(type) __##type##_clib_module_exports =                    \
 
 #endif
