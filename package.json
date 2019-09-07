@@ -1,0 +1,28 @@
+{
+  "name": "@clibs/module",
+  "version": "0.0.0",
+  "description": "A set of macros and functions to make defining a C module easier",
+  "main": "module.h",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "version": "node scripts/update-clib-json && git add clib.json",
+    "test": "make clean test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/clibs/module.git"
+  },
+  "keywords": [
+    "clibs",
+    "clib",
+    "module"
+  ],
+  "author": "Joseph Werle <joseph.werle@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/clibs/module/issues"
+  },
+  "homepage": "https://github.com/clibs/module#readme"
+}
