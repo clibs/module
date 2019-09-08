@@ -6,15 +6,15 @@ clibs/module
 ## Installation
 
 ```sh
-$ clib istall clibs/module --save
+$ clib install clibs/module --save
 ```
 
 ## Usage
 
 ```c
-#include <clibs/require.h>
-#include <clibs/module.h>
-#include <clibs/def.h>
+#include <clibs/module/require.h>
+#include <clibs/module/module.h>
+#include <clibs/module/def.h>
 
 // module definition
 module(your_module) {
@@ -41,10 +41,10 @@ exports(your_module) {
 
 ```c
 // the 'clib_module', 'clib_exports', etc macros
-#include <clibs/module.h>
+#include <clibs/module/module.h>
 
 // defines 'module, exports, defaults, define, require' alias macros
-#include <clibs/def.h>
+#include <clibs/module/def.h>
 
 enum channel_status {
   CHANNEL_STATUS_ERROR = -1,
