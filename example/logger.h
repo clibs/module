@@ -19,8 +19,15 @@ module(logger) {
   void (*error)(char *);
 };
 
-static inline int
+int
 logger_init(module(logger) *exports);
 
-static inline void
+void
 logger_deinit(module(logger) *exports);
+
+// Default Module Exports
+exports(logger) {
+  .mode = LOGGER_NONE,
+  .init = logger_init,
+  .deinit = logger_deinit,
+};

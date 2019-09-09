@@ -1,13 +1,6 @@
 #include <stdio.h>
 #include "logger.h"
 
-// Default Module Exports
-exports(logger) {
-  .mode = LOGGER_NONE,
-  .init = logger_init,
-  .deinit = logger_deinit,
-};
-
 static inline void
 logger_info(char *message) {
   if (require(logger)->mode >= LOGGER_INFO) {
@@ -29,7 +22,7 @@ logger_debug(char *message) {
   }
 }
 
-static inline int
+int
 logger_init(module(logger) *exports) {
   clib_module_init(logger, exports);
   exports->mode = LOGGER_NONE;
@@ -39,7 +32,7 @@ logger_init(module(logger) *exports) {
   return 0;
 }
 
-static void
+void
 logger_deinit(module(logger) *exports) {
   clib_module_deinit(logger);
 }

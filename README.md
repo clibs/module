@@ -126,6 +126,13 @@ logger_init(module(logger) *exports);
 
 void
 logger_deinit(module(logger) *exports);
+
+// Default Module Exports
+exports(logger) {
+  .mode = LOGGER_NONE,
+  .init = logger_init,
+  .deinit = logger_deinit,
+};
 ```
 
 The following `logger.c` file implements the `logger` module definition
@@ -138,14 +145,7 @@ _**logger.c:**_
 #include <stdio.h>
 #include "logger.h"
 
-// Default Module Exports
-exports(logger) {
-  .mode = LOGGER_NONE,
-  .init = logger_init,
-  .deinit = logger_deinit,
-};
-
-static inline int
+int
 logger_init(module(logger) *exports) {
   clib_module_init(logger, exports);
   exports->mode = LOGGER_NONE;
@@ -155,7 +155,7 @@ logger_init(module(logger) *exports) {
   return 0;
 }
 
-static void
+void
 logger_deinit(module(logger) *exports) {
   clib_module_deinit(logger);
 }
